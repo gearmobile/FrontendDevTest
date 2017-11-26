@@ -23,8 +23,25 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script>
-        $(function () {
-
+      $(function () {
+        const draggable = $('.gift').draggable()
+        const droppable = $('.img1').droppable({
+            activate: function () {
+              console.log("start drag")
+            },
+            deactivate: function () {
+              console.log('stop drag')
+            },
+            over: function () {
+              console.log('over bag')
+            },
+            out: function () {
+              console.log('out of the bag')
+            },
+            drop: function () {
+              console.log('drop in bag')
+            }
+          })
         });
     </script>
 </body>

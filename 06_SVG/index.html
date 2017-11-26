@@ -148,7 +148,7 @@
         var allRegions = $('#slide-index-background .land')
         // SELECT REGION
         allRegions.on('click', function () {
-          var selected = $(this).attr('class')
+          const selected = $(this).attr('class')
           if ( selected === 'land selected') {
             $(this).attr('class', 'land')
           } else {
@@ -157,13 +157,13 @@
         })
         // HOVER REGION
         allRegions.on('mouseover', function () {
-          var active = $(this).attr('class')
+          const active = $(this).attr('class')
           if (active !== 'land active' && active !== 'land selected') {
             $(this).attr('class', 'land active')
           }
         })
         allRegions.on('mouseout', function () {
-          var active = $(this).attr('class')
+          const active = $(this).attr('class')
           if (active === 'land active') {
             $(this).attr('class', 'land')
           }
